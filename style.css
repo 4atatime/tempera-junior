@@ -1,117 +1,149 @@
-:root{
-  --color-bg:#ffffff;
-  --color-text:#111111;
-  --color-accent:#c3a16b;
+/* ───  FONTS ────────────────────────── */
+@font-face{
+  font-family:"Marian Web 1554";
+  src:url("assets/fonts/MarianWeb1554-Regular.woff2") format("woff2"),
+      url("assets/fonts/MarianWeb1554-Regular.woff")  format("woff");
+  font-weight:400;
+  font-style:normal;
+  font-display:swap;
 }
 
-*{box-sizing:border-box;margin:0;padding:0;}
+/* ───  PALETTE ──────────────────────── */
+:root{
+  --bg:#eeeeee;
+  --text:#0a0a0a;
+  --cta-bg:#0a0a0a;
+  --cta-btn-bg:#eeeeee;
+  --cta-btn-text:#0a0a0a;
+  --icon-init:#5a5a5a;      /* grey default */
+  --icon-hover:#0a0a0a;     /* dark on hover */
+}
+
+/* ───  BASE ─────────────────────────── */
+*{margin:0;padding:0;box-sizing:border-box;}
 
 body{
-  font-family:'Inter',sans-serif;
-  color:var(--color-text);
-  background:var(--color-bg);
+  font-family:"Times New Roman", Times, serif;
+  font-size:22px;
   line-height:1.6;
+  background:var(--bg);
+  color:var(--text);
+  text-align:center;
 }
 
+/* ───  HEADER ───────────────────────── */
 header{
   padding:3rem 1rem 2rem;
-  text-align:center;
-  position:relative;           /* NEW: so the lang switch can sit top-right */
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
 }
 
-/* ---------- NEW: language switch buttons ---------- */
 .lang-switch{
-  position:absolute;
-  top:1rem;
-  right:1rem;
-  font-size:0.95rem;
+  position:absolute; top:1rem; right:1rem;
+  font-size:1.25rem; font-weight:700;
 }
 .lang-switch button{
-  background:none;
-  border:0;
-  cursor:pointer;
-  padding:0.3rem 0.6rem;
-  color:var(--color-text);
-  font-weight:600;
+  background:none; border:0; cursor:pointer;
+  padding:0.35rem 0.8rem;
 }
-.lang-switch button.active{
-  color:var(--color-accent);
-}
-/* --------------------------------------------------- */
+.lang-switch button.active{color:var(--text);}
 
-header img{
-  max-width:420px;
-  width:70%;
-  height:auto;
-}
+header img{max-width:420px;width:70%;height:auto;}
 
+/* ───  TYPOGRAPHY ───────────────────── */
 h2{
-  font-family:'Playfair Display',serif;
+  font-family:"Marian Web 1554", serif;
   font-size:2rem;
   margin-bottom:1rem;
 }
 
+/* ───  CONTENT SECTIONS ─────────────── */
 section{
   max-width:760px;
-  margin:0 auto;
+  margin:0 auto 2rem;
   padding:2.5rem 1rem;
 }
+p{margin-bottom:1.2rem;}
 
-.accent{color:var(--color-accent);}
-p{margin-bottom:1.2rem;font-size:1.05rem;}
-
-/* signup box */
+/* ───  CTA PANEL ────────────────────── */
 .cta{
-  background:var(--color-accent);
-  color:#fff;
+  background:var(--cta-bg);
+  color:var(--bg);
   border-radius:6px;
-  text-align:center;
   padding:3rem 1rem;
-  margin:3rem 1rem;
+  margin:3rem auto;
+  max-width:760px;
 }
-.cta h2{color:#fff;}
+.cta h2{color:var(--bg);}
 
-form{
+.cta form{
   margin-top:1.5rem;
   display:flex;
-  flex-wrap:wrap;
+  flex-direction:column;
   gap:0.75rem;
-  justify-content:center;
 }
-
 input[type="email"]{
   padding:0.9rem 1rem;
   font-size:1rem;
-  border:0;
+  border:1px solid var(--text);
   border-radius:4px;
-  flex:1 1 260px;
-  max-width:320px;
+  background:var(--bg);
+  color:var(--text);
 }
-
 button[type="submit"]{
-  padding:0.9rem 1.5rem;
-  font-size:1rem;
-  border:0;
+  padding:1rem 1.5rem;
+  font-size:1.05rem;
+  font-weight:700;
+  border:2px solid var(--cta-btn-bg);
   border-radius:4px;
-  background:#111;
-  color:#fff;
+  background:var(--cta-btn-bg);
+  color:var(--cta-btn-text);
   cursor:pointer;
-  transition:background 0.25s;
+  transition:background .25s,color .25s,font-weight .25s;
 }
-button[type="submit"]:hover{background:#333;}
+button[type="submit"]:hover{
+  background:var(--text);
+  color:var(--bg);
+  font-weight:800;                 /* bolder only */
+}
 
+/* ───  FOOTER ───────────────────────── */
 footer{
-  text-align:center;
+  display:flex;
+  flex-direction:column;
+  gap:0.8rem;
+  align-items:center;
   padding:2rem 1rem 4rem;
   font-size:0.9rem;
-  color:#666;
+}
+footer a{color:var(--text);text-decoration:underline;}
+
+/* plain social icons */
+.social-links{display:flex;gap:1.2rem;}
+.social-icon{
+  font-size:28px;                 /* larger glyph */
+  color:var(--icon-init);
+  transition:color .25s;
+  filter:grayscale(100%);
+}
+.social-icon:hover{
+  color:var(--icon-hover);
+  filter:grayscale(0%);
+}
+.social-icon:active{
+  color:#8c8c8c;
 }
 
-/* ---------- NEW: language display helper ---------- */
-.lang-de{display:none;}        /* German hidden by default */
-/* --------------------------------------------------- */
+/* ───  LANGUAGE VISIBILITY ─────────── */
+.lang-de{display:none;}
 
-/* mobile tweaks */
-@media (max-width:480px){
+/* ───  MOBILE ───────────────────────── */
+@media(max-width:480px){
   h2{font-size:1.6rem;}
+  header{padding:2rem 1rem 1rem;}
+  section{padding:1.5rem 1rem;}
+  .cta{padding:2rem 1rem;margin:2rem auto;}
+  footer{padding:1rem 1rem 2rem;font-size:0.85rem;}
 }
