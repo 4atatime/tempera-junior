@@ -15,8 +15,8 @@
   --cta-bg:#0a0a0a;
   --cta-btn-bg:#eeeeee;
   --cta-btn-text:#0a0a0a;
-  --icon-init:#5a5a5a;      /* grey default */
-  --icon-hover:#0a0a0a;     /* dark on hover */
+  --icon-init:#6a6a6a;        /* grey default */
+  --icon-hover:#0a0a0a;       /* dark on hover */
 }
 
 /* ───  BASE ─────────────────────────── */
@@ -40,17 +40,29 @@ header{
   align-items:center;
 }
 
+/* bigger switch + active underline/bold */
 .lang-switch{
-  position:absolute; top:1rem; right:1rem;
-  font-size:1.25rem; font-weight:700;
+  position:absolute;
+  top:1rem; right:1rem;
+  font-size:2rem;          
+  font-weight:900;
 }
 .lang-switch button{
-  background:none; border:0; cursor:pointer;
+  background:none;
+  border:0;
+  cursor:pointer;
   padding:0.35rem 0.8rem;
 }
-.lang-switch button.active{color:var(--text);}
+.lang-switch button.active{
+  text-decoration:underline;   /* underline when active */ /* [1] */
+  font-weight:800;
+}
 
-header img{max-width:420px;width:70%;height:auto;}
+header img{
+  max-width:420px;
+  width:70%;
+  height:auto;
+}
 
 /* ───  TYPOGRAPHY ───────────────────── */
 h2{
@@ -59,7 +71,7 @@ h2{
   margin-bottom:1rem;
 }
 
-/* ───  CONTENT SECTIONS ─────────────── */
+/* ───  SECTIONS ─────────────────────── */
 section{
   max-width:760px;
   margin:0 auto 2rem;
@@ -78,14 +90,15 @@ p{margin-bottom:1.2rem;}
 }
 .cta h2{color:var(--bg);}
 
+/* form */
 .cta form{
   margin-top:1.5rem;
   display:flex;
   flex-direction:column;
-  gap:0.75rem;
+  gap:1rem;
 }
 input[type="email"]{
-  padding:0.9rem 1rem;
+  padding:1.2rem 1.4rem;       /* more inner space */
   font-size:1rem;
   border:1px solid var(--text);
   border-radius:4px;
@@ -93,7 +106,7 @@ input[type="email"]{
   color:var(--text);
 }
 button[type="submit"]{
-  padding:1rem 1.5rem;
+  padding:1.1rem 1.5rem;
   font-size:1.05rem;
   font-weight:700;
   border:2px solid var(--cta-btn-bg);
@@ -106,7 +119,7 @@ button[type="submit"]{
 button[type="submit"]:hover{
   background:var(--text);
   color:var(--bg);
-  font-weight:800;                 /* bolder only */
+  font-weight:800;              /* bolder only */
 }
 
 /* ───  FOOTER ───────────────────────── */
@@ -120,12 +133,15 @@ footer{
 }
 footer a{color:var(--text);text-decoration:underline;}
 
-/* plain social icons */
-.social-links{display:flex;gap:1.2rem;}
+/* social icons: plain glyphs */
+.social-links{
+  display:flex;
+  gap:1.8rem;                  /* more spacing */
+}
 .social-icon{
-  font-size:28px;                 /* larger glyph */
+  font-size:24px;              /* slightly smaller */
   color:var(--icon-init);
-  transition:color .25s;
+  transition:color .25s, filter .25s;
   filter:grayscale(100%);
 }
 .social-icon:hover{
@@ -133,7 +149,7 @@ footer a{color:var(--text);text-decoration:underline;}
   filter:grayscale(0%);
 }
 .social-icon:active{
-  color:#8c8c8c;
+  color:#8c8c8c;               /* click feedback */
 }
 
 /* ───  LANGUAGE VISIBILITY ─────────── */
