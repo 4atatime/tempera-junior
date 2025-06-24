@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Tempera Junior – Strings that Grow with You</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;500&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --color-bg:#ffffff;
+      --color-text:#111111;
+      --color-accent:#c3a16b;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{
+      font-family:'Inter',sans-serif;
+      color:var(--color-text);
+      background:var(--color-bg);
+      line-height:1.6;
+    }
+    header{
+      padding:3rem 1rem 2rem;
+      text-align:center;
+      position:relative;
+    }
+    /* language switch */
+    .lang-switch{
+      position:absolute;
+      top:1rem;
+      right:1rem;
+      font-size:0.95rem;
+    }
+    .lang-switch button{
+      background:none;
+      border:0;
+      cursor:pointer;
+      padding:0.3rem 0.6rem;
+      color:var(--color-text);
+      font-weight:600;
+    }
+    .lang-switch button.active{
+      color:var(--color-accent);
+    }
+    header img{
+      max-width:420px;
+      width:70%;
+      height:auto;
+    }
+    h2{
+      font-family:'Playfair Display',serif;
+      font-size:2rem;
+      margin-bottom:1rem;
+    }
+    section{
+      max-width:760px;
+      margin:0 auto;
+      padding:2.5rem 1rem;
+    }
+    .accent{color:var(--color-accent);}
+    p{margin-bottom:1.2rem;font-size:1.05rem;}
+    /* signup box */
+    .cta{
+      background:var(--color-accent);
+      color:#fff;
+      border-radius:6px;
+      text-align:center;
+      padding:3rem 1rem;
+      margin:3rem 1rem;
+    }
+    .cta h2{color:#fff;}
+    form{
+      margin-top:1.5rem;
+      display:flex;
+      flex-wrap:wrap;
+      gap:0.75rem;
+      justify-content:center;
+    }
+    input[type="email"]{
+      padding:0.9rem 1rem;
+      font-size:1rem;
+      border:0;
+      border-radius:4px;
+      flex:1 1 260px;
+      max-width:320px;
+    }
+    button[type="submit"]{
+      padding:0.9rem 1.5rem;
+      font-size:1rem;
+      border:0;
+      border-radius:4px;
+      background:#111;
+      color:#fff;
+      cursor:pointer;
+      transition:background 0.25s;
+    }
+    button[type="submit"]:hover{background:#333;}
+    footer{
+      text-align:center;
+      padding:2rem 1rem 4rem;
+      font-size:0.9rem;
+      color:#666;
+    }
+    /* language visibility */
+    .lang-de{display:none;}
+    /* mobile tweaks */
+    @media (max-width:480px){
+      h2{font-size:1.6rem;}
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <!-- Language switcher -->
+    <div class="lang-switch">
+      <button id="btn-en" class="active" data-lang="en">EN</button> |
+      <button id="btn-de" data-lang="de">DE</button>
+    </div>
+
+    <!-- Replace src with your final SVG or PNG -->
+    <img src="assets/logo-tempera-junior.svg" alt="Tempera Junior logo">
+  </header>
+
+  <main>
+    <!-- WHY SECTION -->
+    <section id="why">
+      <h2 class="lang-en">Why new strings for small basses?</h2>
+      <h2 class="lang-de">Warum neue Saiten für kleine Bässe?</h2>
+
+      <p class="lang-en">Standard double-bass strings are built for ¾ or 4⁄4 instruments and become stiff and unresponsive on ⅛–½ size basses.</p>
+      <p class="lang-de">Gewöhnliche Kontrabass-Saiten sind für ¾- oder 4⁄4-Instrumente ausgelegt und werden auf ⅛–½-Größen hart und schwer spielbar.</p>
+
+      <p class="lang-en">Small fingers fight to press them down, light child bows can’t set them in motion, and the sound stays muted—so lessons focus on mechanics instead of music.</p>
+      <p class="lang-de">Kleine Hände müssen unnötig drücken, leichte Kinderbögen bringen die Saiten kaum zum Schwingen, und der Klang bleibt dumpf – die Stunde dreht sich um Physik statt um Musik.</p>
+    </section>
+
+    <!-- HOW SECTION -->
+    <section id="how">
+      <h2 class="lang-en">How Tempera Junior solves it</h2>
+      <h2 class="lang-de">Wie Tempera Junior das löst</h2>
+
+      <p class="lang-en">We start with a high-strength polymer core and slimmer windings to drop tension by around 25 %.</p>
+      <p class="lang-de">Ein hochfester Polymer-Kern und schlankere Umspinnungen senken die Zugkraft um ca. 25 %.</p>
+
+      <p class="lang-en">The lighter, more elastic build lets the bass resonate freely, opens a full colour palette at every dynamic and makes practice downright fun.</p>
+      <p class="lang-de">Die leichtere, elastischere Konstruktion lässt den Bass freier schwingen, eröffnet eine volle Farbpalette in jeder Lautstärke und macht das Üben richtig spaßig.</p>
+    </section>
+
+    <!-- SIGN-UP SECTION -->
+    <section class="cta" id="signup">
+      <h2 class="accent lang-en">Be first in line</h2>
+      <h2 class="accent lang-de">Sei ganz vorn dabei</h2>
+
+      <p class="lang-en">We’re polishing prototypes right now. Leave your email and we’ll send early-tester calls, progress videos and launch dates—no spam, ever.</p>
+      <p class="lang-de">Die Prototypen stehen kurz vor dem Feinschliff. Trag deine E-Mail ein und erhalte Einladungen zum Testen, Fortschritts-Videos und Launch-News – garantiert spamfrei.</p>
+
+      <form action="https://example.com/subscribe" method="POST">
+        <input type="email" name="EMAIL" placeholder="your@email.com" required>
+        <button type="submit" class="lang-en">Keep me posted</button>
+        <button type="submit" class="lang-de">Informiert mich</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Tempera Strings · <a href="https://tempera-strings.com/de" style="color:inherit;text-decoration:underline;">tempera-strings.com</a>
+  </footer>
+
+  <script>
+    // simple language toggle
+    const btnEN = document.getElementById('btn-en');
+    const btnDE = document.getElementById('btn-de');
+    const enEls  = document.querySelectorAll('.lang-en');
+    const deEls  = document.querySelectorAll('.lang-de');
+
+    function switchLang(to){
+      if(to === 'de'){
+        enEls.forEach(el=>el.style.display='none');
+        deEls.forEach(el=>el.style.display='');
+        document.documentElement.lang='de';
+        btnDE.classList.add('active');
+        btnEN.classList.remove('active');
+      }else{
+        deEls.forEach(el=>el.style.display='none');
+        enEls.forEach(el=>el.style.display='');
+        document.documentElement.lang='en';
+        btnEN.classList.add('active');
+        btnDE.classList.remove('active');
+      }
+    }
+
+    btnEN.addEventListener('click',()=>switchLang('en'));
+    btnDE.addEventListener('click',()=>switchLang('de'));
+  </script>
+
+</body>
+</html>
