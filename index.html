@@ -2,114 +2,92 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Tempera Junior – Strings that Grow with You</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- heading font -->
-  <link rel="preload" href="assets/fonts/MarianWeb1554-Regular.woff2"
-        as="font" type="font/woff2" crossorigin>
-
-  <!-- favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
-
-  <!-- Font Awesome -->
+  <title>Tempera Junior</title>
+  <link rel="icon" href="assets/favicon.png" type="image/x-icon">
   <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        referrerpolicy="no-referrer"/>
-
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-Bx6JYbX...HASH..."
+      crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="style.css">
+
+  <!-- language toggle script -->
+  <script defer>
+    function setLang(lang){
+      document.querySelectorAll('.lang-en').forEach(e=>e.style.display=(lang==='en')?'block':'none');
+      document.querySelectorAll('.lang-de').forEach(e=>e.style.display=(lang==='de')?'block':'none');
+      document.querySelectorAll('.lang-switch button')
+        .forEach(btn=>btn.classList.toggle('active',btn.dataset.lang===lang));
+    }
+    document.addEventListener('DOMContentLoaded',()=>setLang('en'));
+  </script>
 </head>
 
 <body>
-  <header>
-    <div class="lang-switch">
-      <button id="btn-en" class="active" data-lang="en">EN</button> |
-      <button id="btn-de" data-lang="de">DE</button>
-    </div>
+<header>
+  <div class="lang-switch">
+    <button data-lang="en" onclick="setLang('en')">EN</button> |
+    <button data-lang="de" onclick="setLang('de')">DE</button>
+  </div>
 
-    <img src="assets/logo-tempera-junior.svg" alt="Tempera Junior logo">
-  </header>
+  <img src="assets/logo.svg" alt="Tempera Strings logo">
+</header>
 
-  <main>
-    <section id="why">
-      <h2 class="lang-en">Why new strings for small basses?</h2>
-      <h2 class="lang-de">Warum neue Saiten für kleine Bässe?</h2>
+<section>
+  <h2 class="lang-en">Why lighter strings for young bassists?</h2>
+  <h2 class="lang-de">Warum leichtere Saiten für junge Bassisten?</h2>
 
-      <p class="lang-en">Standard double-bass strings are built for ¾ or 4⁄4 instruments and become stiff and unresponsive on ⅛–½ size basses.</p>
-      <p class="lang-de">Gewöhnliche Kontrabass-Saiten sind für ¾- oder 4⁄4-Instrumente ausgelegt und werden auf ⅛–½-Größen hart und schwer spielbar.</p>
+  <p class="lang-en">Standard ¾ / 4⁄4 strings feel like iron bars on ⅛–½ basses. Kids end up wrestling metal instead of shaping melodies.</p>
+  <p class="lang-de">Gewöhnliche ¾-/4⁄4-Saiten wirken auf 1/8–1/2-Bässen wie Drahtseile. Kinder ringen mehr mit dem Material als mit der Musik.</p>
 
-      <p class="lang-en">Students end up fighting physics instead of shaping music.</p>
-      <p class="lang-de">Schüler kämpfen mit der Physik statt Musik zu machen.</p>
-    </section>
+  <p class="lang-en">Music should be fun, not a physics lesson.</p>
+  <p class="lang-de">Musik soll Spaß machen, kein Physik-Experiment sein.</p>
+</section>
 
-    <section id="how">
-      <h2 class="lang-en">How Tempera Junior solves it</h2>
-      <h2 class="lang-de">Wie Tempera Junior das löst</h2>
+<section>
+  <h2 class="lang-en">How Tempera Junior helps</h2>
+  <h2 class="lang-de">Wie Tempera Junior hilft</h2>
 
-      <p class="lang-en">A high-strength polymer core and slimmer windings drop tension by about 25 %.</p>
-      <p class="lang-de">Ein hochfester Polymer-Kern und schlankere Umspinnungen senken die Zugkraft um ca. 25 %.</p>
+  <p class="lang-en">A flexible polymer core and slim windings ease tension by about 25 %. The bass breathes, responds quickly, and practice feels playful.</p>
+  <p class="lang-de">Ein flexibler Polymerkern und schlanke Wicklungen senken die Spannung um rund 25 %. Der Bass klingt freier, reagiert schneller – Üben macht Freude.</p>
 
-      <p class="lang-en">The lighter build lets the bass resonate freely and makes practice fun.</p>
-      <p class="lang-de">Die leichtere Konstruktion lässt den Bass freier schwingen und macht das Üben spaßig.</p>
-    </section>
+  <!-- sample photo -->
+  <figure>
+    <img class="sample-img" src="assets/sample_foto.jpg" alt="Tempera Junior strings on a small double bass">
+    <figcaption class="caption lang-en">Prototype set on a child bass</figcaption>
+    <figcaption class="caption lang-de">Prototyp-Satz auf einem KinderBass</figcaption>
+  </figure>
+</section>
 
-    <section class="cta" id="signup">
-      <h2 class="accent lang-en">Be first in line</h2>
-      <h2 class="accent lang-de">Sei ganz vorn dabei</h2>
+<section class="cta">
+  <h2 class="lang-en">Be first in line</h2>
+  <h2 class="lang-de">Sei ganz vorn dabei</h2>
 
-      <p class="lang-en">Prototypes are almost ready. Join the list—no spam, promise.</p>
-      <p class="lang-de">Die Prototypen sind fast fertig. Trag dich ein – garantiert spamfrei.</p>
+  <p class="lang-en">Prototypes are almost ready. Join the list—no spam, promise.</p>
+  <p class="lang-de">Die Prototypen sind fast fertig. Trag dich ein – garantiert kein Spam.</p>
 
-      <form action="https://example.com/subscribe" method="POST">
-        <input type="email" name="EMAIL" placeholder="you@example.com" required>
-        <button type="submit" class="lang-en">Keep me posted</button>
-        <button type="submit" class="lang-de">Informiert mich</button>
-      </form>
-    </section>
-  </main>
+  <form action="https://tempera-strings.com/newsletter" method="post">
+    <input type="email" name="email" placeholder="you@example.com" required>
+    <button type="submit" class="lang-en">Keep me posted</button>
+    <button type="submit" class="lang-de">Informiere mich</button>
+  </form>
+</section>
 
-  <footer>
-    <div>© 2025 Tempera Strings ·
-      <a href="https://tempera-strings.com/de" target="_blank" rel="noopener">tempera-strings.com</a>
-    </div>
+<footer>
+  <div>© 2025 Tempera Strings ·
+    <a href="https://tempera-strings.com/de" target="_blank" rel="noopener">tempera-strings.com</a>
+  </div>
 
-    <div class="social-links">
-      <a class="social-icon" href="https://tempera-strings.com/de"            aria-label="Website"   target="_blank" rel="noopener">
-        <i class="fa-solid fa-globe"></i>
-      </a>
-      <a class="social-icon" href="https://www.instagram.com/temperastrings/" aria-label="Instagram" target="_blank" rel="noopener">
-        <i class="fa-brands fa-instagram"></i>
-      </a>
-      <a class="social-icon" href="https://www.facebook.com/temperastrings"   aria-label="Facebook"  target="_blank" rel="noopener">
-        <i class="fa-brands fa-facebook-f"></i>
-      </a>
-    </div>
-  </footer>
-
-  <script>
-    /* language switch */
-    const btnEN = document.getElementById('btn-en');
-    const btnDE = document.getElementById('btn-de');
-    const enEls = document.querySelectorAll('.lang-en');
-    const deEls = document.querySelectorAll('.lang-de');
-
-    const show = list => list.forEach(el =>
-      el.style.display = ['BUTTON','A','SPAN','I'].includes(el.tagName) ? 'inline-block' : 'block');
-    const hide = list => list.forEach(el => el.style.display = 'none');
-
-    function switchLang(lang){
-      if (lang === 'de') {
-        hide(enEls); show(deEls);
-        document.documentElement.lang = 'de';
-        btnDE.classList.add('active'); btnEN.classList.remove('active');
-      } else {
-        hide(deEls); show(enEls);
-        document.documentElement.lang = 'en';
-        btnEN.classList.add('active'); btnDE.classList.remove('active');
-      }
-    }
-    btnEN.onclick = () => switchLang('en');
-    btnDE.onclick = () => switchLang('de');
-  </script>
+  <div class="social-links">
+    <a class="social-icon" href="https://tempera-strings.com/de"            aria-label="Website"   target="_blank" rel="noopener">
+      <i class="fa-solid fa-globe"></i>
+    </a>
+    <a class="social-icon" href="https://www.instagram.com/temperastrings/" aria-label="Instagram" target="_blank" rel="noopener">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+    <a class="social-icon" href="https://www.facebook.com/temperastrings"   aria-label="Facebook"  target="_blank" rel="noopener">
+      <i class="fa-brands fa-facebook-f"></i>
+    </a>
+  </div>
+</footer>
 </body>
 </html>
