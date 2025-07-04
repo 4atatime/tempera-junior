@@ -1,93 +1,142 @@
+<!--  index.html  -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Tempera Junior</title>
-  <link rel="icon" href="assets/favicon.png" type="image/x-icon">
-  <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-      integrity="sha512-Bx6JYbX...HASH..."
-      crossorigin="anonymous" referrerpolicy="no-referrer">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tempera Sprouts</title>
 
-  <!-- language toggle script -->
-  <script defer>
-    function setLang(lang){
-      document.querySelectorAll('.lang-en').forEach(e=>e.style.display=(lang==='en')?'block':'none');
-      document.querySelectorAll('.lang-de').forEach(e=>e.style.display=(lang==='de')?'block':'none');
-      document.querySelectorAll('.lang-switch button')
-        .forEach(btn=>btn.classList.toggle('active',btn.dataset.lang===lang));
-    }
-    document.addEventListener('DOMContentLoaded',()=>setLang('en'));
-  </script>
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="assets/sprouts_favicon.png" />
+
+  <!-- styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        referrerpolicy="no-referrer"/>
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<header>
-  <div class="lang-switch">
-    <button data-lang="en" onclick="setLang('en')">EN</button> |
-    <button data-lang="de" onclick="setLang('de')">DE</button>
-  </div>
+  <!-- ─── HEADER / HERO ──────────────────────────────────────────── -->
+  <header>
+    <!-- language toggle (unchanged) -->
+    <div class="lang-switch">
+      <button class="btn-lang-en active">EN</button>
+      <button class="btn-lang-de">DE</button>
+    </div>
 
-  <img src="assets/logo.svg" alt="Tempera Strings logo">
-</header>
+    <!-- logo -->
+    <img src="assets/sprouts_logo.svg"
+         alt="Tempera Sprouts logo"
+         class="logo" />
 
-<section>
-  <h2 class="lang-en">Why lighter strings for young bassists?</h2>
-  <h2 class="lang-de">Warum leichtere Saiten für junge Bassisten?</h2>
+    <!-- headline EN -->
+    <h1 class="headline lang-en">
+      <span class="hd-top">Finally.</span><br />
+      Double bass strings<br />
+      Designed for KIDS!
+    </h1>
 
-  <p class="lang-en">Standard ¾ / 4⁄4 strings feel like iron bars on ⅛–½ basses. Kids end up wrestling metal instead of shaping melodies.</p>
-  <p class="lang-de">Gewöhnliche ¾-/4⁄4-Saiten wirken auf 1/8–1/2-Bässen wie Drahtseile. Kinder ringen mehr mit dem Material als mit der Musik.</p>
+    <!-- headline DE -->
+    <h1 class="headline lang-de">
+      <span class="hd-top">Endlich.</span><br />
+      Kontrabass-Saiten<br />
+      Für KINDERhände!
+    </h1>
 
-  <p class="lang-en">Music should be fun, not a physics lesson.</p>
-  <p class="lang-de">Musik soll Spaß machen, kein Physik-Experiment sein.</p>
-</section>
+    <!-- coming soon tag -->
+    <p class="coming-soon lang-en">COMING SOON.</p>
+    <p class="coming-soon lang-de">BALD ERHÄLTLICH.</p>
 
-<section>
-  <h2 class="lang-en">How Tempera Junior helps</h2>
-  <h2 class="lang-de">Wie Tempera Junior hilft</h2>
+    <!-- e-mail sign-up -->
+    <div class="cta">
+      <h2 class="lang-en">
+        Sign up below to stay updated on our launch, and<br />
+        please spread the word to fellow teachers and educators!
+      </h2>
+      <h2 class="lang-de">
+        Trag dich ein, um zum Launch informiert zu werden –<br />
+        und sag gern Kolleg*innen Bescheid!
+      </h2>
 
-  <p class="lang-en">A flexible polymer core and slim windings ease tension by about 25 %. The bass breathes, responds quickly, and practice feels playful.</p>
-  <p class="lang-de">Ein flexibler Polymerkern und schlanke Wicklungen senken die Spannung um rund 25 %. Der Bass klingt freier, reagiert schneller – Üben macht Freude.</p>
+      <form action="#" method="post">
+        <input type="text"  name="name"  placeholder="Name"   required />
+        <input type="email" name="email" placeholder="E-Mail" required />
+        <button type="submit">Keep me posted!</button>
+      </form>
+    </div>
 
-  <!-- sample photo -->
-  <figure>
-    <img class="sample-img" src="assets/sample_foto.jpg" alt="Tempera Junior strings on a small double bass">
-    <figcaption class="caption lang-en">Prototype set on a child bass</figcaption>
-    <figcaption class="caption lang-de">Prototyp-Satz auf einem KinderBass</figcaption>
-  </figure>
-</section>
+    <!-- scroll cue -->
+    <!-- <a href="#more" class="more-info-btn">MORE INFO ↓</a> -->
+  </header>
 
-<section class="cta">
-  <h2 class="lang-en">Be first in line</h2>
-  <h2 class="lang-de">Sei ganz vorn dabei</h2>
+  <!-- ─── CONTENT SECTIONS ───────────────────────────────────────── -->
+  <main id="more">
+    <section class="lang-en">
+      <h2>Regular double bass strings are simply too stiff and heavy for young hands and small bows.</h2>
+      <p>How can a child learn to make music on strings even their teacher struggles to play?</p>
+    </section>
 
-  <p class="lang-en">Prototypes are almost ready. Join the list—no spam, promise.</p>
-  <p class="lang-de">Die Prototypen sind fast fertig. Trag dich ein – garantiert kein Spam.</p>
 
-  <form action="https://tempera-strings.com/newsletter" method="post">
-    <input type="email" name="email" placeholder="you@example.com" required>
-    <button type="submit" class="lang-en">Keep me posted</button>
-    <button type="submit" class="lang-de">Informiere mich</button>
-  </form>
-</section>
+    <!-- hero photo exactly as in the draft -->
+    <img src="assets/sample_foto.jpg"
+         alt="Child playing small double bass"
+         class="hero-photo" />
 
-<footer>
-  <div>© 2025 Tempera Strings ·
-    <a href="https://tempera-strings.com/de" target="_blank" rel="noopener">tempera-strings.com</a>
-  </div>
+    <section class="lang-en">
+      <h2>Tempera Sprouts are thinner, lighter, and more elastic, helping our young bassists discover the joy of music from day one.</h2>
+    </section>
 
-  <div class="social-links">
-    <a class="social-icon" href="https://tempera-strings.com/de"            aria-label="Website"   target="_blank" rel="noopener">
-      <i class="fa-solid fa-globe"></i>
-    </a>
-    <a class="social-icon" href="https://www.instagram.com/temperastrings/" aria-label="Instagram" target="_blank" rel="noopener">
-      <i class="fa-brands fa-instagram"></i>
-    </a>
-    <a class="social-icon" href="https://www.facebook.com/temperastrings"   aria-label="Facebook"  target="_blank" rel="noopener">
-      <i class="fa-brands fa-facebook-f"></i>
-    </a>
-  </div>
-</footer>
+    <!-- German copies -->
+    <section class="lang-de">
+      <h2>Gewöhnliche Kontrabass-Saiten sind für Kinderhände zu steif und schwer, besonders mit kleinen Bögen.</h2>
+      <p>Wie soll ein Kind Musik gestalten, wenn selbst die Lehrkraft kämpfen muss?</p>
+    </section>
+
+    <section class="lang-de">
+      <h2>Tempera Sprouts sind schlanker, leichter und elastischer – so macht Bassspielen vom ersten Tag an Spaß.</h2>
+    </section>
+  </main>
+
+  <!-- ─── FOOTER (identical to original) ─────────────────────────── -->
+  <footer>
+    <div>© 2025 Tempera Strings ·
+      <a href="https://tempera-strings.com/de" target="_blank" rel="noopener">tempera-strings.com</a>
+    </div>
+
+    <div class="social-links">
+      <a class="social-icon" href="https://tempera-strings.com/de"            aria-label="Website"   target="_blank" rel="noopener">
+        <i class="fa-solid fa-globe"></i>
+      </a>
+      <a class="social-icon" href="https://www.instagram.com/temperastrings/" aria-label="Instagram" target="_blank" rel="noopener">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <a class="social-icon" href="https://www.facebook.com/temperastrings"   aria-label="Facebook"  target="_blank" rel="noopener">
+        <i class="fa-brands fa-facebook-f"></i>
+      </a>
+    </div>
+  </footer>
+
+
+  <!-- language-switch helper -->
+  <script>
+    const btnEN = document.querySelector('.btn-lang-en');
+    const btnDE = document.querySelector('.btn-lang-de');
+    const allEN = document.querySelectorAll('.lang-en');
+    const allDE = document.querySelectorAll('.lang-de');
+
+    function setLang(showDE) {
+      allEN.forEach(el => el.style.display = showDE ? 'none'  : '');
+      allDE.forEach(el => el.style.display = showDE ? 'block' : 'none');  // <- FIX
+      btnEN.classList.toggle('active', !showDE);
+      btnDE.classList.toggle('active',  showDE);
+    }
+    btnEN.addEventListener('click', () => setLang(false));
+    btnDE.addEventListener('click', () => setLang(true));
+  </script>
 </body>
 </html>
