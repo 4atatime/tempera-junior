@@ -1,16 +1,16 @@
+<!--  index.html  -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Tempera Junior – Strings that Grow with You</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- heading font -->
-  <link rel="preload" href="assets/fonts/MarianWeb1554-Regular.woff2"
-        as="font" type="font/woff2" crossorigin>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tempera Sprouts</title>
 
   <!-- favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
+  <link rel="icon" type="image/png" href="assets/sprouts_favicon.png" />
+
+  <!-- styles -->
+  <link rel="stylesheet" href="style.css" />
 
   <!-- Font Awesome -->
   <link rel="stylesheet"
@@ -21,53 +21,88 @@
 </head>
 
 <body>
+  <!-- ─── HEADER / HERO ──────────────────────────────────────────── -->
   <header>
+    <!-- language toggle (unchanged) -->
     <div class="lang-switch">
-      <button id="btn-en" class="active" data-lang="en">EN</button> |
-      <button id="btn-de" data-lang="de">DE</button>
+      <button class="btn-lang-en active">EN</button>
+      <button class="btn-lang-de">DE</button>
     </div>
 
-    <img src="assets/logo-tempera-junior.svg" alt="Tempera Junior logo">
+    <!-- logo -->
+    <img src="assets/sprouts_logo.svg"
+         alt="Tempera Sprouts logo"
+         class="logo" />
+
+    <!-- headline EN -->
+    <h1 class="headline lang-en">
+      <span class="hd-top">Finally.</span><br />
+      Double bass strings<br />
+      Designed for KIDS!
+    </h1>
+
+    <!-- headline DE -->
+    <h1 class="headline lang-de">
+      <span class="hd-top">Endlich.</span><br />
+      Kontrabass-Saiten<br />
+      Für KINDERhände!
+    </h1>
+
+    <!-- coming soon tag -->
+    <p class="coming-soon lang-en">COMING SOON.</p>
+    <p class="coming-soon lang-de">BALD ERHÄLTLICH.</p>
+
+    <!-- e-mail sign-up -->
+    <div class="cta">
+      <h2 class="lang-en">
+        Sign up below to stay updated on our launch, and<br />
+        please spread the word to fellow teachers and educators!
+      </h2>
+      <h2 class="lang-de">
+        Trag dich ein, um zum Launch informiert zu werden –<br />
+        und sag gern Kolleg*innen Bescheid!
+      </h2>
+
+      <form action="#" method="post">
+        <input type="text"  name="name"  placeholder="Name"   required />
+        <input type="email" name="email" placeholder="E-Mail" required />
+        <button type="submit">Keep me posted!</button>
+      </form>
+    </div>
+
+    <!-- scroll cue -->
+    <!-- <a href="#more" class="more-info-btn">MORE INFO ↓</a> -->
   </header>
 
-  <main>
-    <section id="why">
-      <h2 class="lang-en">Why new strings for small basses?</h2>
-      <h2 class="lang-de">Warum neue Saiten für kleine Bässe?</h2>
-
-      <p class="lang-en">Standard double-bass strings are built for ¾ or 4⁄4 instruments and become stiff and unresponsive on ⅛–½ size basses.</p>
-      <p class="lang-de">Gewöhnliche Kontrabass-Saiten sind für ¾- oder 4⁄4-Instrumente ausgelegt und werden auf ⅛–½-Größen hart und schwer spielbar.</p>
-
-      <p class="lang-en">Students end up fighting physics instead of shaping music.</p>
-      <p class="lang-de">Schüler kämpfen mit der Physik statt Musik zu machen.</p>
+  <!-- ─── CONTENT SECTIONS ───────────────────────────────────────── -->
+  <main id="more">
+    <section class="lang-en">
+      <h2>Regular double bass strings are simply too stiff and heavy for young hands and small bows.</h2>
+      <p>How can a child learn to make music on strings even their teacher struggles to play?</p>
     </section>
 
-    <section id="how">
-      <h2 class="lang-en">How Tempera Junior solves it</h2>
-      <h2 class="lang-de">Wie Tempera Junior das löst</h2>
 
-      <p class="lang-en">A high-strength polymer core and slimmer windings drop tension by about 25 %.</p>
-      <p class="lang-de">Ein hochfester Polymer-Kern und schlankere Umspinnungen senken die Zugkraft um ca. 25 %.</p>
+    <!-- hero photo exactly as in the draft -->
+    <img src="assets/sample_foto.jpg"
+         alt="Child playing small double bass"
+         class="hero-photo" />
 
-      <p class="lang-en">The lighter build lets the bass resonate freely and makes practice fun.</p>
-      <p class="lang-de">Die leichtere Konstruktion lässt den Bass freier schwingen und macht das Üben spaßig.</p>
+    <section class="lang-en">
+      <h2>Tempera Sprouts are thinner, lighter, and more elastic, helping our young bassists discover the joy of music from day one.</h2>
     </section>
 
-    <section class="cta" id="signup">
-      <h2 class="accent lang-en">Be first in line</h2>
-      <h2 class="accent lang-de">Sei ganz vorn dabei</h2>
+    <!-- German copies -->
+    <section class="lang-de">
+      <h2>Gewöhnliche Kontrabass-Saiten sind für Kinderhände zu steif und schwer, besonders mit kleinen Bögen.</h2>
+      <p>Wie soll ein Kind Musik gestalten, wenn selbst die Lehrkraft kämpfen muss?</p>
+    </section>
 
-      <p class="lang-en">Prototypes are almost ready. Join the list—no spam, promise.</p>
-      <p class="lang-de">Die Prototypen sind fast fertig. Trag dich ein – garantiert spamfrei.</p>
-
-      <form action="https://example.com/subscribe" method="POST">
-        <input type="email" name="EMAIL" placeholder="you@example.com" required>
-        <button type="submit" class="lang-en">Keep me posted</button>
-        <button type="submit" class="lang-de">Informiert mich</button>
-      </form>
+    <section class="lang-de">
+      <h2>Tempera Sprouts sind schlanker, leichter und elastischer – so macht Bassspielen vom ersten Tag an Spaß.</h2>
     </section>
   </main>
 
+  <!-- ─── FOOTER (identical to original) ─────────────────────────── -->
   <footer>
     <div>© 2025 Tempera Strings ·
       <a href="https://tempera-strings.com/de" target="_blank" rel="noopener">tempera-strings.com</a>
@@ -86,30 +121,22 @@
     </div>
   </footer>
 
+
+  <!-- language-switch helper -->
   <script>
-    /* language switch */
-    const btnEN = document.getElementById('btn-en');
-    const btnDE = document.getElementById('btn-de');
-    const enEls = document.querySelectorAll('.lang-en');
-    const deEls = document.querySelectorAll('.lang-de');
+    const btnEN = document.querySelector('.btn-lang-en');
+    const btnDE = document.querySelector('.btn-lang-de');
+    const allEN = document.querySelectorAll('.lang-en');
+    const allDE = document.querySelectorAll('.lang-de');
 
-    const show = list => list.forEach(el =>
-      el.style.display = ['BUTTON','A','SPAN','I'].includes(el.tagName) ? 'inline-block' : 'block');
-    const hide = list => list.forEach(el => el.style.display = 'none');
-
-    function switchLang(lang){
-      if (lang === 'de') {
-        hide(enEls); show(deEls);
-        document.documentElement.lang = 'de';
-        btnDE.classList.add('active'); btnEN.classList.remove('active');
-      } else {
-        hide(deEls); show(enEls);
-        document.documentElement.lang = 'en';
-        btnEN.classList.add('active'); btnDE.classList.remove('active');
-      }
+    function setLang(showDE) {
+      allEN.forEach(el => el.style.display = showDE ? 'none'  : '');
+      allDE.forEach(el => el.style.display = showDE ? 'block' : 'none');  // <- FIX
+      btnEN.classList.toggle('active', !showDE);
+      btnDE.classList.toggle('active',  showDE);
     }
-    btnEN.onclick = () => switchLang('en');
-    btnDE.onclick = () => switchLang('de');
+    btnEN.addEventListener('click', () => setLang(false));
+    btnDE.addEventListener('click', () => setLang(true));
   </script>
 </body>
 </html>
